@@ -4,4 +4,4 @@ WORKDIR /app
 ADD https://github.com/Greeshma594/build-artifactory/raw/refs/heads/main/helloworld-1.0-SNAPSHOT.war .
 COPY helloworld-1.0-SNAPSHOT.war /usr/local/tomcat/webapps/
 EXPOSE 8080
-ENTRYPOINT ["java" , "-jar" , "helloworld-1.0-SNAPSHOT.war"]
+CMD ["catalina.sh", "run"]
